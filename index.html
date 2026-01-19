@@ -9,7 +9,7 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
     />
     <meta property="og:title" content="Sarah Siggins Portfolio"/>
-    <meta property="og:description" content="Portfolio of Sarah Siggins, Data Science Student"/>
+    <meta property="og:description" content="Personal Portfolio of Sarah Siggins"/>
     <meta property="og:type" content="website" />
     <meta
         property="og:image"
@@ -21,7 +21,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image:alt" content="Sarah Siggins Portfolio">
     <meta name="twitter:title" content="Sarah Siggins Portfolio" />
-    <meta name="twitter:description" content="Portfolio of Sarah Siggins, Data Science Student" />
+    <meta name="twitter:description" content="Personal Portfolio of Sarah Siggins" />
     <title>Sarah Siggins Portfolio</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -81,10 +81,21 @@
               style="margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;"
             >
               <div class="v-toolbar__content justify-center flex-wrap">
-                <a href="#skills" class="ma-1 v-btn v-btn--text theme--light v-size--large"><span class="v-btn__content">Skills</span></a>
-                <a href="#works" class="ma-1 v-btn v-btn--text theme--light v-size--large"><span class="v-btn__content">Recent Works</span></a>
-                <a href="#hobbies" class="ma-1 v-btn v-btn--text theme--light v-size--large"><span class="v-btn__content">Hobbies</span></a>
-                <a href="#contact" class="ma-1 v-btn v-btn--outlined v-btn--text theme--light v-size--large"><span class="v-btn__content">Let's Talk!</span></a>
+                <a
+                  href="#works"
+                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
+                  ><span class="v-btn__content">Recent Works</span></a
+                >
+                <a
+                  href="#hobbies"
+                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
+                  ><span class="v-btn__content">Hobbies</span></a
+                >
+                <a
+                  href="#contact"
+                  class="ma-1 v-btn v-btn--outlined v-btn--text theme--light v-size--large"
+                  ><span class="v-btn__content">Let's Talk!</span></a
+                >
               </div>
             </header>
           </nav>
@@ -93,37 +104,19 @@
             <div class="row align-center justify-center">
               <div class="text-center col-md-10 col-12">
                 <h1 class="display-4" data-aos="fade-up">{{ name }}</h1>
+                <div style="height: 40px;"></div>
                 <h2 data-aos="fade-up">{{ jobTitle }}</h2>
-              </div>
-              <div class="text-center col-md-5 col-12" data-aos="fade-up">
-                <p>{{ jobDescription }}</p>
+                <div class="text-center col-md-5 col-12" data-aos="fade-up">
+                  <p>{{ jobDescription }}</p>
+                </div>
               </div>
             </div>
           </header>
 
           <main>
-            <!-- Skills Section -->
-            <section>
-              <div class="container fill-height" id="skills" style="height:auto; min-height:100vh">
-                <div class="row justify-center">
-                  <div class="text-center col-md-10 col-12">
-                    <h1 data-aos="fade-up">#Skills</h1>
-                  </div>
-                  <div v-for="skill in skills" class="text-center col-sm-6 col-md-4 col-12">
-                    <div class="v-card v-card--hover v-sheet theme--light" style="height: 100%" data-aos="fade-up">
-                      <div class="v-card__text">
-                        <h2>{{ skill.name }}</h2>
-                        <p>{{ skill.description }}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
             <!-- Works Section -->
             <section>
-              <div class="container fill-height" id="works" style="height:auto; min-height:100vh">
+              <div class="container fill-height" id="works" style="height: auto; min-height: 100vh">
                 <div class="row justify-center">
                   <div class="text-center col-md-10 col-12">
                     <h1 data-aos="fade-up">#Recent Works</h1>
@@ -142,7 +135,7 @@
 
             <!-- Hobbies Section -->
             <section>
-              <div class="container fill-height" id="hobbies" style="height:auto; min-height:100vh">
+              <div class="container fill-height" id="hobbies" style="height: auto; min-height: 100vh">
                 <div class="row justify-center">
                   <div class="text-center col-md-10 col-12">
                     <h1 data-aos="fade-up">#Hobbies</h1>
@@ -159,9 +152,9 @@
               </div>
             </section>
 
-            <!-- Contacts Section -->
+            <!-- Contact Section -->
             <section>
-              <div class="container fill-height" id="contact" style="height:auto; min-height:100vh">
+              <div class="container fill-height" id="contact" style="height: auto; min-height: 100vh">
                 <div class="row justify-center">
                   <div class="text-center col-md-10 col-12">
                     <h1 data-aos="fade-up">#Let's Talk!</h1>
@@ -169,13 +162,11 @@
                   <div class="text-center col-sm-6 col-md-4 col-12">
                     <div class="row" data-aos="fade-up">
                       <div class="text-center col col-12">
-                        <h3><a :href="'mailto:' + contacts.email">{{ contacts.email }}</a></h3>
+                        <h3>{{ contacts.email }}</h3>
                         <h3>{{ contacts.mobileNo }}</h3>
                       </div>
                       <div class="text-center col col-12" data-aos="fade-up">
-                        <a v-for="link in contacts.links" :href="link.link" target="_blank" 
-                           :download="link.name==='Resume'?'' : null" 
-                           class="ma-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--default">
+                        <a v-for="link in contacts.links" :href="link.link" target="_blank" class="ma-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--default">
                           <span class="v-btn__content">{{ link.name }}</span>
                         </a>
                       </div>
@@ -235,11 +226,14 @@
             return { style: 'min-height: 100vh', class: 'fill-height' }
           },
           contactLinks() {
-            return this.contacts && this.contacts.links ? this.contacts.links : []
+            if (this.contacts && this.contacts.links && this.contacts.links.length) {
+              return this.contacts.links
+            }
+            return []
           },
         },
       })
-      
+
       AOS.init({
         once: true,
         delay: 0
