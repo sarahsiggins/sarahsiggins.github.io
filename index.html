@@ -2,31 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio - <span id="userName"></span></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title> <!-- will be updated dynamically -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <h1 id="userName"></h1>
     <h2 id="userTitle"></h2>
     <p id="userDescription"></p>
   </header>
 
+  <!-- Skills Section -->
   <section id="skills">
     <h3>Skills</h3>
     <ul id="skillsList"></ul>
   </section>
 
+  <!-- Projects / Works Section -->
   <section id="works">
     <h3>Projects</h3>
     <ul id="worksList"></ul>
   </section>
 
+  <!-- Hobbies Section -->
   <section id="hobbies">
     <h3>Hobbies</h3>
     <ul id="hobbiesList"></ul>
   </section>
 
+  <!-- Contacts Section -->
   <section id="contacts">
     <h3>Contact</h3>
     <p>Email: <a id="contactEmail" href=""></a></p>
@@ -34,16 +40,22 @@
     <ul id="contactLinks"></ul>
   </section>
 
+  <!-- Load Config -->
   <script src="config.js"></script>
   <script>
+    const config = window.PorfolioConfig;
+
+    // Update tab title dynamically
+    document.title = `${config.name} Portfolio`;
+
     // Populate header
-    document.getElementById('userName').textContent = window.PorfolioConfig.name;
-    document.getElementById('userTitle').textContent = window.PorfolioConfig.jobTitle;
-    document.getElementById('userDescription').textContent = window.PorfolioConfig.jobDescription;
+    document.getElementById('userName').textContent = config.name;
+    document.getElementById('userTitle').textContent = config.jobTitle;
+    document.getElementById('userDescription').textContent = config.jobDescription;
 
     // Populate skills
     const skillsList = document.getElementById('skillsList');
-    window.PorfolioConfig.skills.forEach(skill => {
+    config.skills.forEach(skill => {
       const li = document.createElement('li');
       li.innerHTML = `<strong>${skill.name}:</strong> ${skill.description}`;
       skillsList.appendChild(li);
@@ -51,7 +63,7 @@
 
     // Populate works/projects
     const worksList = document.getElementById('worksList');
-    window.PorfolioConfig.works.forEach(work => {
+    config.works.forEach(work => {
       const li = document.createElement('li');
       li.innerHTML = `<strong><a href="${work.link}" target="_blank">${work.name}</a>:</strong> ${work.description}`;
       worksList.appendChild(li);
@@ -59,19 +71,19 @@
 
     // Populate hobbies
     const hobbiesList = document.getElementById('hobbiesList');
-    window.PorfolioConfig.hobbies.forEach(hobby => {
+    config.hobbies.forEach(hobby => {
       const li = document.createElement('li');
       li.innerHTML = `<strong>${hobby.name}:</strong> ${hobby.description}`;
       hobbiesList.appendChild(li);
     });
 
     // Populate contacts
-    document.getElementById('contactEmail').textContent = window.PorfolioConfig.contacts.email;
-    document.getElementById('contactEmail').href = `mailto:${window.PorfolioConfig.contacts.email}`;
-    document.getElementById('contactMobile').textContent = window.PorfolioConfig.contacts.mobileNo;
+    document.getElementById('contactEmail').textContent = config.contacts.email;
+    document.getElementById('contactEmail').href = `mailto:${config.contacts.email}`;
+    document.getElementById('contactMobile').textContent = config.contacts.mobileNo;
 
     const contactLinks = document.getElementById('contactLinks');
-    window.PorfolioConfig.contacts.links.forEach(link => {
+    config.contacts.links.forEach(link => {
       const li = document.createElement('li');
       li.innerHTML = `<a href="${link.link}" target="_blank">${link.name}</a>`;
       contactLinks.appendChild(li);
