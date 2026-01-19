@@ -1,7 +1,7 @@
 window.PorfolioConfig = {
   name: 'Sarah Siggins',
   jobTitle: 'Data Science Student',
-  jobDescription: 'write this later',
+  jobDescription: 'Write this later', // You can fill this with a short professional summary
   skills: [
     {
       name: 'Python',
@@ -43,7 +43,6 @@ window.PorfolioConfig = {
       description: 'Laborum pariatur sint labore officia enim occaecat id.'
     }
   ],
-  
   contacts: {
     email: 'sarahhsiggins@gmail.com',
     mobileNo: '703 424 0840',
@@ -58,7 +57,7 @@ window.PorfolioConfig = {
       },
       {
         name: 'Resume',
-        link: 'assets/resume/Sarah_Siggins_Resume.pdf'
+        link: 'assets/Sarah_Siggins_Resume.pdf' // Make sure your PDF is in the assets folder
       }
     ]
   }
