@@ -85,7 +85,12 @@
     const contactLinks = document.getElementById('contactLinks');
     config.contacts.links.forEach(link => {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="${link.link}" target="_blank">${link.name}</a>`;
+      if (link.name === "Resume") {
+        // Add download attribute for Resume
+        li.innerHTML = `<a href="${link.link}" download target="_blank">${link.name}</a>`;
+      } else {
+        li.innerHTML = `<a href="${link.link}" target="_blank">${link.name}</a>`;
+      }
       contactLinks.appendChild(li);
     });
   </script>
