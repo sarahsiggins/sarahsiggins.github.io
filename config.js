@@ -43,6 +43,7 @@ window.PorfolioConfig = {
       description: 'Laborum pariatur sint labore officia enim occaecat id.'
     }
   ],
+  
   contacts: {
     email: 'sarahhsiggins@gmail.com',
     mobileNo: '703 424 0840',
@@ -54,6 +55,10 @@ window.PorfolioConfig = {
       {
         name: 'LinkedIn',
         link: 'https://www.linkedin.com/in/sarahhsiggins/'
+      },
+      {
+        name: 'Resume',
+        link: 'assets/resume/Sarah_Siggins_Resume.pdf'
       }
     ]
   }
