@@ -7,9 +7,9 @@ window.PorfolioConfig = {
   education: 'Masters in Data Science from University of Virginia (Expected Graduation: August 2026), B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
   employer: 'Lead Portfolio Investment Analyst at T. Rowe Price',
   aboutImages: [
-    { file: 'solo.JPG', alt: 'Solo' },
-    { file: 'VT1.jpg', alt: 'Virginia Tech 1' },
-    { file: 'VT2.HEIC', alt: 'Virginia Tech 2' }
+    { file: 'solo.jpg', alt: 'Solo' },
+    { file: 'vt1.jpg', alt: 'Virginia Tech 1' },
+    { file: 'vt2.jpeg', alt: 'Virginia Tech 2' }
   ],
 
   // Projects / Work
@@ -33,15 +33,15 @@ window.PorfolioConfig = {
 
   // Hobbies / Interests
   hobbies: [
-    { name: 'Hiking', description: 'Exploring trails and nature.', image: 'hiking.JPG' },
+    { name: 'Hiking', description: 'Exploring trails and nature.', image: 'hiking.jpg' },
     { name: 'Running', description: 'Keeping fit and active.', image: 'running.jpg' },
-    { name: 'Dog', description: 'Spending time with my dog Bennie.', image: 'bennie.HEIC' },
+    { name: 'Dog', description: 'Spending time with my dog Bennie.', image: 'bennie.jpeg' },
     
     // Travel as part of hobbies
-    { name: 'Germany', description: 'Traveling to Germany.', image: 'germany.JPG' },
-    { name: 'Iceland', description: 'Experiencing Iceland.', image: 'iceland.HEIC' },
-    { name: 'Utah', description: 'Exploring Utah.', image: 'utah.JPG' },
-    { name: 'Hawaii', description: 'Vacationing in Hawaii.', image: 'hawaii.HEIC' }
+    { name: 'Germany', description: 'Traveling to Germany.', image: 'germany.jpg' },
+    { name: 'Iceland', description: 'Experiencing Iceland.', image: 'iceland.jpeg' },
+    { name: 'Utah', description: 'Exploring Utah.', image: 'utah.jpg' },
+    { name: 'Hawaii', description: 'Vacationing in Hawaii.', image: 'hawaii.jpeg' }
   ],
 
   // Contact info
