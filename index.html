@@ -9,7 +9,7 @@
 
   <meta property="og:title" content="Sarah Siggins Portfolio"/>
   <meta property="og:description" content="Personal Portfolio of Sarah Siggins"/>
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="website"/>
 
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet"/>
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet"/>
@@ -21,7 +21,7 @@
       font-family: 'Fjalla One', sans-serif !important;
     }
 
-    /* ---------- HEADER ---------- */
+    /* ---------- HERO ---------- */
     header.hero {
       min-height: 100vh;
       display: flex;
@@ -49,43 +49,6 @@
       height: auto;
       border-radius: 8px;
       object-fit: cover;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .about-images img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    /* ---------- TRAVEL GALLERY ---------- */
-    .travel-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .travel-gallery img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .travel-gallery img:hover {
-      transform: scale(1.04);
-    }
-
-    /* ---------- WHITE OUTLINED BUTTONS (FIX) ---------- */
-    .v-btn.v-btn--outlined {
-      border-color: white !important;
-      color: white !important;
-      border-width: 2px !important;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-    }
-
-    .v-btn.v-btn--outlined:hover {
-      background-color: rgba(255, 255, 255, 0.08) !important;
     }
 
     @media (max-width: 768px) {
@@ -101,6 +64,19 @@
         width: 80%;
       }
     }
+
+    /* ---------- TRAVEL GALLERY ---------- */
+    .travel-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .travel-gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -109,13 +85,26 @@
   <div class="v-application theme--light">
     <div class="v-application--wrap">
 
-      <!-- NAV -->
-      <v-app-bar app flat elevate-on-scroll>
+      <!-- NAVBAR (Plain Template Style) -->
+      <v-app-bar app flat elevate-on-scroll color="white">
         <v-spacer></v-spacer>
-        <a href="#about" class="ma-2">About</a>
-        <a href="#works" class="ma-2">Projects</a>
-        <a href="#hobbies" class="ma-2">Hobbies</a>
-        <a href="#contact" class="ma-2">Contact</a>
+
+        <a href="#about" class="ma-1 v-btn v-btn--text theme--light">
+          <span class="v-btn__content">About</span>
+        </a>
+
+        <a href="#works" class="ma-1 v-btn v-btn--text theme--light">
+          <span class="v-btn__content">Projects</span>
+        </a>
+
+        <a href="#hobbies" class="ma-1 v-btn v-btn--text theme--light">
+          <span class="v-btn__content">Hobbies</span>
+        </a>
+
+        <a href="#contact" class="ma-1 v-btn v-btn--outlined theme--light">
+          <span class="v-btn__content">Contact</span>
+        </a>
+
         <v-spacer></v-spacer>
       </v-app-bar>
 
@@ -224,8 +213,8 @@
           <a v-for="link in contacts.links"
              :href="link.link"
              target="_blank"
-             class="ma-2 v-btn v-btn--outlined">
-            {{ link.name }}
+             class="ma-1 v-btn v-btn--outlined theme--light">
+            <span class="v-btn__content">{{ link.name }}</span>
           </a>
         </div>
       </section>
