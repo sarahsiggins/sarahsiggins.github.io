@@ -1,68 +1,29 @@
 window.PorfolioConfig = {
   name: 'Sarah Siggins',
   jobTitle: 'Data Science Student',
-  jobDescription: 'Write this later', // You can fill this with a short professional summary
-  skills: [
-    {
-      name: 'Python',
-      description: 'Reprehenderit mollit id ad veniam.'
-    },
-    {
-      name: 'R',
-      description: 'Fugiat veniam esse consequat quis cillum elit consequat Lorem pariatur ipsum veniam irure incididunt non.'
-    }
-  ],
-  works: [
-    {
-      name: 'Vue Stripe Checkout',
-      link: 'https://jofftiquez.github.io/vue-stripe-checkout',
-      description: 'Mollit dolor tempor adipisicing non pariatur in tempor cillum do. In officia ullamco laborum ullamco voluptate. Laboris sunt quis enim Lorem laboris aliquip duis non magna excepteur voluptate. Pariatur velit aliquip officia nulla anim reprehenderit deserunt. Sint nostrud ipsum do aliquip.'
-    },
-    {
-      name: 'ToDo App',
-      link: 'https://theuselessweb.com/',
-      description: 'Esse magna anim incididunt enim sint aute consectetur ipsum id nostrud eu do. Pariatur et anim enim aliquip anim. Laboris labore incididunt labore enim nisi elit excepteur deserunt irure exercitation exercitation. Lorem sit ad laborum sit velit veniam sit nisi nostrud occaecat duis nulla duis.'
-    },
-    {
-      name: 'A Mobile Game',
-      link: 'https://theuselessweb.com/',
-      description: 'Incididunt non cupidatat deserunt ut commodo qui non do Lorem. Qui aute minim enim sit magna est consectetur incididunt. Ex est cupidatat tempor pariatur deserunt labore tempor minim laboris magna ipsum minim ea ea. Consectetur do anim laboris nulla nisi veniam sint qui.'
-    }
-  ],
+  jobDescription: 'write this later',
+
+  about: 'Education: XYZ University, Data Science. Current Employer: ABC Company.',
+  aboutImages: ['solo.JPG', 'VT1.jpg', 'VT2.HEIC'],
+
   hobbies: [
-    {
-      name: 'Running',
-      description: 'Occaecat ipsum dolor ea ad ut irure do proident excepteur consectetur duis eu culpa velit.'
-    },
-    {
-      name: 'Baking',
-      description: 'Laboris occaecat adipisicing culpa duis aute ea excepteur quis eiusmod mollit est pariatur.'
-    },
-    {
-      name: 'Travel',
-      description: 'Laborum pariatur sint labore officia enim occaecat id.'
-    },
-    {
-      name: 'Dogs',
-      description: 'My Golden Retriever, Bennie!'
-    }
+    { name: 'Running', description: 'I enjoy running.', image: 'running.jpg' },
+    { name: 'Hiking', description: 'I love hiking.', image: 'hiking.JPG' },
+    { name: 'Dog', description: 'My dog Bennie is my best friend.', image: 'bennie.HEIC' },
+
+    // Travel as hobbies
+    { name: 'Germany', description: 'Travel interest: Germany', image: 'germany.JPG' },
+    { name: 'Iceland', description: 'Travel interest: Iceland', image: 'iceland.HEIC' },
+    { name: 'Utah', description: 'Travel interest: Utah', image: 'utah.JPG' },
+    { name: 'Hawaii', description: 'Travel interest: Hawaii', image: 'hawaii.HEIC' }
   ],
+
   contacts: {
     email: 'sarahhsiggins@gmail.com',
     mobileNo: '703 424 0840',
     links: [
-      {
-        name: 'GitHub',
-        link: 'https://github.com/sarahsiggins'
-      },
-      {
-        name: 'LinkedIn',
-        link: 'https://www.linkedin.com/in/sarahhsiggins/'
-      },
-      {
-        name: 'Resume',
-        link: 'assets/Sarah_Siggins_Resume.pdf' // Make sure your PDF is in the assets folder
-      }
+      { name: 'GitHub', link: 'https://github.com/sarahsiggins' },
+      { name: 'LinkedIn', link: 'https://www.linkedin.com/in/sarahhsiggins/' }
     ]
   }
 };
