@@ -1,360 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
-    />
-    <meta property="og:title" content="Sarah Siggins Portfolio"/>
-    <meta property="og:description" content="Personal Portfolio of Sarah Siggins"/>
-    <meta property="og:type" content="website" />
-    <meta
-        property="og:image"
-        content="https://freefolio.web.app/images/plain.png"
-    />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image:alt" content="Sarah Siggins Portfolio">
-    <meta name="twitter:title" content="Sarah Siggins Portfolio" />
-    <meta name="twitter:description" content="Personal Portfolio of Sarah Siggins" />
-    <title>Sarah Siggins Portfolio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <link
-      href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-      .v-application,
-      .v-application .body-1,
-      .v-application .body-2,
-      .v-application .caption,
-      .v-application .display-1,
-      .v-application .display-2,
-      .v-application .display-3,
-      .v-application .display-4,
-      .v-application .headline,
-      .v-application .overline,
-      .v-application .subtitle-1,
-      .v-application .subtitle-2,
-      .v-application .title {
-        font-family: 'Fjalla One', sans-serif !important;
-      }
-      :-webkit-any(article, aside, nav, section) h1 {
-        font-size: 2em;
-        margin-block-start: 0.67em;
-        margin-block-end: 0.67em;
-        margin-top: 0;
-        margin-bottom: 0;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>Sarah Siggins Portfolio</title>
+
+  <meta property="og:title" content="Sarah Siggins Portfolio"/>
+  <meta property="og:description" content="Personal Portfolio of Sarah Siggins"/>
+  <meta property="og:type" content="website" />
+
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+  <style>
+    .v-application * {
+      font-family: 'Fjalla One', sans-serif !important;
+    }
+
+    /* ---------- HEADER ---------- */
+    header.hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    header.hero img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+
+    /* ---------- ABOUT IMAGES ---------- */
+    .about-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 1200px;
+    }
+
+    .about-images img {
+      width: 30%;
+      max-width: 260px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-images img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      header.hero {
+        text-align: center;
       }
 
-      /* Header two-column layout */
-      header .row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-      }
-      header img {
-        max-width: 300px;
-        height: auto;
-        border-radius: 8px;
-      }
-      @media (max-width: 768px) {
-        header .row {
-          flex-direction: column;
-        }
-        header img {
-          margin-bottom: 20px;
-        }
-      }
-
-      /* About Me images side by side */
       .about-images {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-        margin-bottom: 20px;
+        flex-direction: column;
       }
+
       .about-images img {
-        flex: 1 1 30%;
-        max-width: 100%;
-        border-radius: 8px;
+        width: 80%;
       }
+    }
 
-      /* Travel gallery layout */
-      .travel-gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 15px;
-        margin-top: 20px;
-      }
-      .travel-gallery img {
-        width: 100%;
-        border-radius: 8px;
-      }
-    </style>
-  </head>
+    /* ---------- TRAVEL GALLERY ---------- */
+    .travel-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
 
-  <body>
-    <div id="app">
-      <div
-        data-app="true"
-        class="v-application v-application--is-ltr theme--light"
-        id="app"
-      >
-        <div class="v-application--wrap">
-          <!-- Navigation -->
-          <nav>
-            <header
-              class="v-sheet theme--light v-toolbar v-app-bar v-app-bar--elevate-on-scroll v-app-bar--fixed v-app-bar--hide-shadow white"
-              data-booted="true"
-              style="margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;"
-            >
-              <div class="v-toolbar__content justify-center flex-wrap">
-                <a
-                  href="#about"
-                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
-                  ><span class="v-btn__content">About Me</span></a
-                >
-                <a
-                  href="#works"
-                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
-                  ><span class="v-btn__content">Projects</span></a
-                >
-                <a
-                  href="#hobbies"
-                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
-                  ><span class="v-btn__content">Hobbies</span></a
-                >
-                <a
-                  href="#contact"
-                  class="ma-1 v-btn v-btn--outlined v-btn--text theme--light v-size--large"
-                  ><span class="v-btn__content">Let's Connect!</span></a
-                >
-              </div>
-            </header>
-          </nav>
+    .travel-gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
 
-          <!-- Header -->
-          <header class="container fill-height" style="min-height: 100vh;">
-            <div class="row align-center justify-center" style="height: 100%;">
-              <div class="col-md-4 col-12 text-center" data-aos="fade-up">
-                <img src="assets/headshot.JPG" alt="Sarah Siggins Headshot">
-              </div>
+    .travel-gallery img:hover {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
 
-              <div class="col-md-6 col-12" data-aos="fade-up">
-                <h1 class="display-4">{{ name }}</h1>
-                <h2 style="margin-top: 15px;">{{ jobTitle }}</h2>
-                <p style="margin-top: 20px;">{{ jobDescription }}</p>
-              </div>
-            </div>
-          </header>
+<body>
+<div id="app">
+  <div class="v-application theme--light">
+    <div class="v-application--wrap">
 
-          <main>
-            <!-- About Me Section -->
-            <section>
-              <div class="container fill-height" id="about" style="height: auto; min-height: 80vh; margin-top: 50px;">
-                <div class="row justify-center">
-                  <div class="text-center col-md-10 col-12">
-                    <h1 data-aos="fade-up">About Me</h1>
-                  </div>
-                  <div class="col-12" data-aos="fade-up">
-                    <div class="about-images">
-                      <img src="assets/solo.JPG" alt="Solo">
-                      <img src="assets/VT1.jpg" alt="Virginia Tech 1">
-                      <img src="assets/VT2.HEIC" alt="Virginia Tech 2">
-                    </div>
-                  </div>
-                  <div class="col-md-10 col-12 text-center" data-aos="fade-up">
-                    <h3>Education</h3>
-                    <ul style="list-style-type:none; padding:0;">
-                      <li>Masters in Data Science, University of Virginia (Expected Graduation: August 2026)</li>
-                      <li>B.S. Chemical Engineering, Virginia Tech</li>
-                      <li>B.S. Business (Finance Major), Virginia Tech</li>
-                    </ul>
-                    <h3>Current Role</h3>
-                    <p>Lead Portfolio Investment Analyst at T. Rowe Price</p>
-                  </div>
-                </div>
-              </div>
-            </section>
+      <!-- NAV -->
+      <v-app-bar app flat elevate-on-scroll>
+        <v-spacer></v-spacer>
+        <a href="#about" class="ma-2">About</a>
+        <a href="#works" class="ma-2">Projects</a>
+        <a href="#hobbies" class="ma-2">Hobbies</a>
+        <a href="#contact" class="ma-2">Contact</a>
+        <v-spacer></v-spacer>
+      </v-app-bar>
 
-            <!-- Projects Section -->
-            <section>
-              <div class="container fill-height" id="works" style="height: auto; min-height: 100vh">
-                <div class="row justify-center">
-                  <div class="text-center col-md-10 col-12">
-                    <h1 data-aos="fade-up">Project Work</h1>
-                  </div>
-                  <div v-for="work in works" class="text-center col-sm-6 col-md-4 col-12">
-                    <a :href="work.link" target="_blank" class="v-card v-card--hover v-card--link v-sheet theme--light" style="height:100%" data-aos="fade-up">
-                      <div class="v-card__text">
-                        <h2>{{ work.name }}</h2>
-                        <p>{{ work.description }}</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Hobbies & Travel Section -->
-            <section>
-              <div class="container fill-height" id="hobbies" style="height: auto; min-height: 100vh; margin-top:50px;">
-                <div class="row justify-center">
-                  <div class="text-center col-md-10 col-12">
-                    <h1 data-aos="fade-up">Hobbies & Travel</h1>
-                  </div>
-                  
-                  <!-- Individual Hobbies -->
-                  <div class="text-center col-sm-6 col-md-4 col-12" data-aos="fade-up">
-                    <div class="v-card v-card--hover v-sheet theme--light" style="height:100%">
-                      <div class="v-card__text">
-                        <h2>Hiking</h2>
-                        <img src="assets/hiking.JPG" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
-                        <p>Exploring trails and nature.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="text-center col-sm-6 col-md-4 col-12" data-aos="fade-up">
-                    <div class="v-card v-card--hover v-sheet theme--light" style="height:100%">
-                      <div class="v-card__text">
-                        <h2>Running</h2>
-                        <img src="assets/running.JPG" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
-                        <p>Keeping active and fit.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="text-center col-sm-6 col-md-4 col-12" data-aos="fade-up">
-                    <div class="v-card v-card--hover v-sheet theme--light" style="height:100%">
-                      <div class="v-card__text">
-                        <h2>Bennie</h2>
-                        <img src="assets/bennie.HEIC" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
-                        <p>My adorable dog.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Travel Gallery -->
-                  <div class="col-12" data-aos="fade-up">
-                    <div class="travel-gallery">
-                      <img src="assets/germany.JPG" alt="Germany">
-                      <img src="assets/iceland.HEIC" alt="Iceland">
-                      <img src="assets/utah.JPG" alt="Utah">
-                      <img src="assets/hawaii.HEIC" alt="Hawaii">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section>
-              <div class="container fill-height" id="contact" style="height: auto; min-height: 100vh">
-                <div class="row justify-center">
-                  <div class="text-center col-md-10 col-12">
-                    <h1 data-aos="fade-up">Let's Connect!</h1>
-                  </div>
-                  <div class="text-center col-sm-6 col-md-4 col-12">
-                    <div class="row" data-aos="fade-up">
-                      <div class="text-center col col-12">
-                        <h3>{{ contacts.email }}</h3>
-                        <h3>{{ contacts.mobileNo }}</h3>
-                      </div>
-                      <div class="text-center col col-12" data-aos="fade-up">
-                        <a v-for="link in contacts.links" :href="link.link" target="_blank" class="ma-1 v-btn v-btn--outlined v-btn--rounded theme--light v-size--default">
-                          <span class="v-btn__content">{{ link.name }}</span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-          </main>
-
-          <footer data-booted="true" class="v-footer v-sheet theme--light">
-            <div class="spacer"></div>
-            <small>
-              Template made with
-              <i aria-hidden="true" class="v-icon notranslate red--text mdi mdi-heart theme--light"></i>
-              by
-              <a href="https://twitter.com/jrtiquez" target="_blank">Jofferson R Tiquez</a>
-            </small>
-          </footer>
+      <!-- HERO -->
+      <header class="hero container">
+        <div class="row align-center justify-center">
+          <div class="col-md-4 text-center" data-aos="fade-up">
+            <img src="assets/headshot.JPG" alt="Sarah Siggins">
+          </div>
+          <div class="col-md-6" data-aos="fade-up">
+            <h1 class="display-4">{{ name }}</h1>
+            <h2 class="mt-4">{{ jobTitle }}</h2>
+            <p class="mt-4">{{ jobDescription }}</p>
+          </div>
         </div>
-      </div>
+      </header>
+
+      <!-- ABOUT -->
+      <section id="about" class="container my-16">
+        <h1 class="text-center mb-6" data-aos="fade-up">About Me</h1>
+
+        <div class="about-images" data-aos="fade-up">
+          <img src="assets/solo.JPG" alt="Sarah">
+          <img src="assets/VT1.jpg" alt="Virginia Tech">
+          <img src="assets/VT2.HEIC" alt="Virginia Tech">
+        </div>
+
+        <div class="text-center" data-aos="fade-up">
+          <h3>Education</h3>
+          <p>
+            Masters in Data Science, University of Virginia (Expected August 2026)<br/>
+            B.S. Chemical Engineering, Virginia Tech<br/>
+            B.S. Business (Finance), Virginia Tech
+          </p>
+
+          <h3 class="mt-6">Current Role</h3>
+          <p>Lead Portfolio Investment Analyst at T. Rowe Price</p>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="works" class="container my-16">
+        <h1 class="text-center mb-6" data-aos="fade-up">Projects</h1>
+        <div class="row justify-center">
+          <div v-for="work in works" class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+            <a :href="work.link" target="_blank">
+              <v-card hover>
+                <v-card-text>
+                  <h2>{{ work.name }}</h2>
+                  <p>{{ work.description }}</p>
+                </v-card-text>
+              </v-card>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOBBIES -->
+      <section id="hobbies" class="container my-16">
+        <h1 class="text-center mb-6" data-aos="fade-up">Hobbies & Travel</h1>
+
+        <div class="row justify-center mb-10">
+          <div class="col-md-4" data-aos="fade-up">
+            <v-card>
+              <v-card-text>
+                <h2>Hiking</h2>
+                <img src="assets/hiking.JPG" width="100%">
+              </v-card-text>
+            </v-card>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up">
+            <v-card>
+              <v-card-text>
+                <h2>Running</h2>
+                <img src="assets/running.JPG" width="100%">
+              </v-card-text>
+            </v-card>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up">
+            <v-card>
+              <v-card-text>
+                <h2>Bennie</h2>
+                <img src="assets/bennie.HEIC" width="100%">
+              </v-card-text>
+            </v-card>
+          </div>
+        </div>
+
+        <div class="travel-gallery" data-aos="fade-up">
+          <img src="assets/germany.JPG">
+          <img src="assets/iceland.HEIC">
+          <img src="assets/utah.JPG">
+          <img src="assets/hawaii.HEIC">
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="container my-16 text-center">
+        <h1 data-aos="fade-up">Let's Connect</h1>
+        <p>{{ contacts.email }}</p>
+        <p>{{ contacts.mobileNo }}</p>
+
+        <div>
+          <a v-for="link in contacts.links"
+             :href="link.link"
+             target="_blank"
+             class="ma-2 v-btn v-btn--outlined">
+            {{ link.name }}
+          </a>
+        </div>
+      </section>
+
+      <footer class="text-center my-6">
+        <small>Template by Jofferson R. Tiquez</small>
+      </footer>
+
     </div>
+  </div>
+</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script src="config.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      var vm = new Vue({
-        el: '#app',
-        vuetify: new Vuetify({
-          theme: {
-            themes: {
-              light: {
-                primary: '#1976D2',
-                secondary: '#424242',
-                accent: '#82B1FF',
-                error: '#FF5252',
-                info: '#2196F3',
-                success: '#4CAF50',
-                warning: '#FFC107',
-              },
-            },
-          },
-        }),
-        data() {
-          return {
-            menu: false,
-            ...window.PorfolioConfig,
-          }
-        },
-        computed: {
-          $isMobile() {
-            return this.$vuetify.breakpoint.smAndDown
-          },
-          sectionHeight() {
-            return { style: 'min-height: 100vh', class: 'fill-height' }
-          },
-          contactLinks() {
-            if (this.contacts && this.contacts.links && this.contacts.links.length) {
-              return this.contacts.links
-            }
-            return []
-          },
-        },
-      })
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script src="config.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-      AOS.init({
-        once: true,
-        delay: 0
-      });
-    </script>
-  </body>
+<script>
+new Vue({
+  el: '#app',
+  vuetify: new Vuetify(),
+  data() {
+    return {
+      ...window.PorfolioConfig
+    }
+  }
+})
+
+AOS.init({ once: true })
+</script>
+</body>
 </html>
