@@ -41,6 +41,10 @@ window.PorfolioConfig = {
     {
       name: 'Travel',
       description: 'Laborum pariatur sint labore officia enim occaecat id.'
+    },
+    {
+      name: 'Dogs',
+      description: 'My Golden Retriever, Bennie!'
     }
   ],
   contacts: {
