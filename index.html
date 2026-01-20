@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"
+    />
     <meta property="og:title" content="Sarah Siggins Portfolio"/>
     <meta property="og:description" content="Personal Portfolio of Sarah Siggins"/>
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://freefolio.web.app/images/plain.png"/>
+    <meta
+        property="og:image"
+        content="https://freefolio.web.app/images/plain.png"
+    />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -16,17 +23,23 @@
     <meta name="twitter:title" content="Sarah Siggins Portfolio" />
     <meta name="twitter:description" content="Personal Portfolio of Sarah Siggins" />
     <title>Sarah Siggins Portfolio</title>
-    
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-    
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet"/>
-    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css"
+      rel="stylesheet"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
     <style>
       .v-application,
       .v-application .body-1,
@@ -50,88 +63,135 @@
         margin-top: 0;
         margin-bottom: 0;
       }
-      .header-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.25;
-        z-index: -1;
+      /* Header two-column layout */
+      header .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
       }
-      .gallery img {
-        width: 100%;
+      header img {
+        max-width: 300px;
+        height: auto;
         border-radius: 8px;
-        margin-bottom: 15px;
+      }
+      @media (max-width: 768px) {
+        header .row {
+          flex-direction: column;
+        }
+        header img {
+          margin-bottom: 20px;
+        }
+      }
+      /* Travel gallery images */
+      .travel-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+      .travel-gallery img {
+        max-width: 100%;
+        border-radius: 8px;
+      }
+      .travel-gallery .col-sm-6 {
+        max-width: 45%;
+      }
+      @media (max-width: 768px) {
+        .travel-gallery .col-sm-6 {
+          max-width: 100%;
+        }
       }
     </style>
   </head>
 
   <body>
     <div id="app">
-      <div data-app="true" class="v-application v-application--is-ltr theme--light" id="app">
+      <div
+        data-app="true"
+        class="v-application v-application--is-ltr theme--light"
+        id="app"
+      >
         <div class="v-application--wrap">
-
           <!-- Navigation -->
           <nav>
-            <header class="v-sheet theme--light v-toolbar v-app-bar v-app-bar--elevate-on-scroll v-app-bar--fixed v-app-bar--hide-shadow white">
+            <header
+              class="v-sheet theme--light v-toolbar v-app-bar v-app-bar--elevate-on-scroll v-app-bar--fixed v-app-bar--hide-shadow white"
+              data-booted="true"
+              style="margin-top: 0px; transform: translateY(0px); left: 0px; right: 0px;"
+            >
               <div class="v-toolbar__content justify-center flex-wrap">
-                <a href="#about" class="ma-1 v-btn v-btn--text theme--light v-size--large">
-                  <span class="v-btn__content">About Me</span>
-                </a>
-                <a href="#works" class="ma-1 v-btn v-btn--text theme--light v-size--large">
-                  <span class="v-btn__content">Projects</span>
-                </a>
-                <a href="#hobbies" class="ma-1 v-btn v-btn--text theme--light v-size--large">
-                  <span class="v-btn__content">Hobbies</span>
-                </a>
-                <a href="#contact" class="ma-1 v-btn v-btn--outlined v-btn--text theme--light v-size--large">
-                  <span class="v-btn__content">Let's Connect!</span>
-                </a>
+                <a
+                  href="#about"
+                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
+                  ><span class="v-btn__content">About Me</span></a
+                >
+                <a
+                  href="#works"
+                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
+                  ><span class="v-btn__content">Projects</span></a
+                >
+                <a
+                  href="#hobbies"
+                  class="ma-1 v-btn v-btn--text theme--light v-size--large"
+                  ><span class="v-btn__content">Hobbies</span></a
+                >
+                <a
+                  href="#contact"
+                  class="ma-1 v-btn v-btn--outlined v-btn--text theme--light v-size--large"
+                  ><span class="v-btn__content">Let's Connect!</span></a
+                >
               </div>
             </header>
           </nav>
 
           <!-- Header -->
-          <header class="container fill-height" style="position: relative; min-height: 100vh;">
-            <img src="assets/headshot.JPG" class="header-background" alt="Sarah Siggins Headshot">
-            <div class="row align-center justify-center" style="position: relative;">
-              <div class="text-center col-md-10 col-12">
-                <h1 class="display-4" data-aos="fade-up">{{ name }}</h1>
-                <div style="height: 40px;"></div>
-                <h2 data-aos="fade-up">{{ jobTitle }}</h2>
-                <div class="text-center col-md-5 col-12" data-aos="fade-up">
-                  <p>{{ jobDescription }}</p>
-                </div>
+          <header class="container fill-height" style="min-height: 100vh;">
+            <div class="row align-center justify-center" style="height: 100%;">
+              <!-- Left Column: Headshot -->
+              <div class="col-md-4 col-12 text-center" data-aos="fade-up">
+                <img src="assets/headshot.JPG" alt="Sarah Siggins Headshot">
+              </div>
+
+              <!-- Right Column: Name, Title, Description -->
+              <div class="col-md-6 col-12" data-aos="fade-up">
+                <h1 class="display-4">{{ name }}</h1>
+                <h2 style="margin-top: 15px;">{{ jobTitle }}</h2>
+                <p style="margin-top: 20px;">{{ jobDescription }}</p>
               </div>
             </div>
           </header>
 
           <main>
             <!-- About Me Section -->
-            <section id="about">
-              <div class="container fill-height" style="min-height: 70vh;">
+            <section>
+              <div class="container fill-height" id="about" style="height: auto; min-height: 80vh; margin-top: 50px;">
                 <div class="row justify-center">
                   <div class="text-center col-md-10 col-12">
                     <h1 data-aos="fade-up">About Me</h1>
-                    <p data-aos="fade-up">{{ education }}</p>
-                    <p data-aos="fade-up"><strong>Current Employer:</strong> {{ employer }}</p>
                   </div>
-                  <div class="text-center col-md-12 col-12 gallery" data-aos="fade-up">
-                    <div class="row">
-                      <div v-for="image in aboutImages" class="col-sm-6 col-md-4 col-12">
-                        <img :src="'assets/' + image.file" :alt="image.alt">
-                      </div>
-                    </div>
+                  <div class="col-md-6 col-12 text-center" data-aos="fade-up">
+                    <img src="assets/solo.JPG" style="max-width:100%; border-radius:8px; margin-bottom:20px;">
+                    <img src="assets/VT1.jpg" style="max-width:48%; margin-right:4%; border-radius:8px;">
+                    <img src="assets/VT2.HEIC" style="max-width:48%; border-radius:8px;">
+                  </div>
+                  <div class="col-md-6 col-12" data-aos="fade-up">
+                    <h3>Education</h3>
+                    <ul>
+                      <li>Masters in Data Science, University of Virginia (Expected Graduation: August 2026)</li>
+                      <li>B.S. Chemical Engineering, Virginia Tech</li>
+                      <li>B.S. Business (Finance Major), Virginia Tech</li>
+                    </ul>
+                    <h3>Current Role</h3>
+                    <p>Lead Portfolio Investment Analyst at T. Rowe Price</p>
                   </div>
                 </div>
               </div>
             </section>
 
-            <!-- Projects / Work Section -->
-            <section id="works">
-              <div class="container fill-height" style="min-height: 70vh;">
+            <!-- Projects Section -->
+            <section>
+              <div class="container fill-height" id="works" style="height: auto; min-height: 100vh">
                 <div class="row justify-center">
                   <div class="text-center col-md-10 col-12">
                     <h1 data-aos="fade-up">Project Work</h1>
@@ -149,32 +209,60 @@
             </section>
 
             <!-- Hobbies Section -->
-            <section id="hobbies">
-              <div class="container fill-height" style="min-height: 70vh;">
+            <section>
+              <div class="container fill-height" id="hobbies" style="height: auto; min-height: 100vh; margin-top:50px;">
                 <div class="row justify-center">
                   <div class="text-center col-md-10 col-12">
-                    <h1 data-aos="fade-up">Hobbies & Interests</h1>
+                    <h1 data-aos="fade-up">Hobbies & Travel</h1>
                   </div>
-                  <div class="text-center col-md-12 col-12 gallery" data-aos="fade-up">
-                    <div class="row">
-                      <div v-for="hobby in hobbies" class="col-sm-6 col-md-4 col-12">
-                        <div class="v-card v-card--hover v-sheet theme--light">
-                          <img v-if="hobby.image" :src="'assets/' + hobby.image" :alt="hobby.name">
-                          <div class="v-card__text">
-                            <h2>{{ hobby.name }}</h2>
-                            <p>{{ hobby.description }}</p>
-                          </div>
-                        </div>
+                  
+                  <!-- Hiking -->
+                  <div class="text-center col-sm-6 col-md-4 col-12">
+                    <div class="v-card v-card--hover v-sheet theme--light" style="height:100%" data-aos="fade-up">
+                      <div class="v-card__text">
+                        <h2>Hiking</h2>
+                        <img src="assets/hiking.JPG" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                        <p>Exploring trails and nature.</p>
                       </div>
                     </div>
+                  </div>
+
+                  <!-- Running -->
+                  <div class="text-center col-sm-6 col-md-4 col-12">
+                    <div class="v-card v-card--hover v-sheet theme--light" style="height:100%" data-aos="fade-up">
+                      <div class="v-card__text">
+                        <h2>Running</h2>
+                        <img src="assets/running.JPG" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                        <p>Keeping active and fit.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Dog -->
+                  <div class="text-center col-sm-6 col-md-4 col-12">
+                    <div class="v-card v-card--hover v-sheet theme--light" style="height:100%" data-aos="fade-up">
+                      <div class="v-card__text">
+                        <h2>Bennie</h2>
+                        <img src="assets/bennie.HEIC" style="max-width:100%; border-radius:8px; margin-bottom:10px;">
+                        <p>My adorable dog.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Travel Gallery -->
+                  <div class="text-center col-12 travel-gallery" data-aos="fade-up" style="margin-top:30px;">
+                    <img src="assets/germany.JPG" alt="Germany">
+                    <img src="assets/iceland.HEIC" alt="Iceland">
+                    <img src="assets/utah.JPG" alt="Utah">
+                    <img src="assets/hawaii.HEIC" alt="Hawaii">
                   </div>
                 </div>
               </div>
             </section>
 
             <!-- Contact Section -->
-            <section id="contact">
-              <div class="container fill-height" style="min-height: 70vh;">
+            <section>
+              <div class="container fill-height" id="contact" style="height: auto; min-height: 100vh">
                 <div class="row justify-center">
                   <div class="text-center col-md-10 col-12">
                     <h1 data-aos="fade-up">Let's Connect!</h1>
@@ -195,14 +283,14 @@
                 </div>
               </div>
             </section>
+
           </main>
 
-          <!-- Footer -->
-          <footer class="v-footer v-sheet theme--light">
+          <footer data-booted="true" class="v-footer v-sheet theme--light">
             <div class="spacer"></div>
             <small>
               Template made with
-              <i class="v-icon notranslate red--text mdi mdi-heart theme--light" aria-hidden="true"></i>
+              <i aria-hidden="true" class="v-icon notranslate red--text mdi mdi-heart theme--light"></i>
               by
               <a href="https://twitter.com/jrtiquez" target="_blank">Jofferson R Tiquez</a>
             </small>
@@ -238,10 +326,27 @@
             menu: false,
             ...window.PorfolioConfig,
           }
-        }
+        },
+        computed: {
+          $isMobile() {
+            return this.$vuetify.breakpoint.smAndDown
+          },
+          sectionHeight() {
+            return { style: 'min-height: 100vh', class: 'fill-height' }
+          },
+          contactLinks() {
+            if (this.contacts && this.contacts.links && this.contacts.links.length) {
+              return this.contacts.links
+            }
+            return []
+          },
+        },
       })
 
-      AOS.init({ once: true, delay: 0 });
+      AOS.init({
+        once: true,
+        delay: 0
+      });
     </script>
   </body>
 </html>
