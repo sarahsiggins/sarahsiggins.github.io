@@ -39,7 +39,7 @@ window.PorfolioConfig = {
       description: 'Laboris occaecat adipisicing culpa duis aute ea excepteur quis eiusmod mollit est pariatur.'
     },
     {
-      name: 'Puzzles',
+      name: 'Travel',
       description: 'Laborum pariatur sint labore officia enim occaecat id.'
     }
   ],
