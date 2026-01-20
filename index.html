@@ -51,6 +51,34 @@
       object-fit: cover;
     }
 
+    /* ---------- HOBBY CARDS ---------- */
+    .hobby-card {
+      text-align: center;
+    }
+
+    .hobby-card h2 {
+      margin-bottom: 4px;
+    }
+
+    .hobby-card p {
+      font-size: 14px;
+      margin-bottom: 12px;
+      opacity: 0.85;
+    }
+
+    /* ---------- TRAVEL ---------- */
+    .travel-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .travel-gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
     @media (max-width: 768px) {
       header.hero {
         text-align: center;
@@ -64,19 +92,6 @@
         width: 80%;
       }
     }
-
-    /* ---------- TRAVEL GALLERY ---------- */
-    .travel-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .travel-gallery img {
-      width: 100%;
-      border-radius: 8px;
-    }
   </style>
 </head>
 
@@ -85,7 +100,7 @@
   <div class="v-application theme--light">
     <div class="v-application--wrap">
 
-      <!-- NAVBAR (Plain Template Style) -->
+      <!-- NAVBAR -->
       <v-app-bar app flat elevate-on-scroll color="white">
         <v-spacer></v-spacer>
 
@@ -162,15 +177,16 @@
         </div>
       </section>
 
-      <!-- HOBBIES -->
+      <!-- HOBBIES & INTERESTS -->
       <section id="hobbies" class="container my-16">
         <h1 class="text-center mb-6" data-aos="fade-up">Hobbies & Interests</h1>
 
-        <div class="row justify-center mb-10">
+        <div class="row justify-center mb-16">
           <div class="col-md-4" data-aos="fade-up">
             <v-card>
-              <v-card-text>
+              <v-card-text class="hobby-card">
                 <h2>Hiking</h2>
+                <p>Exploring new trails</p>
                 <img src="assets/hiking.jpg" width="100%">
               </v-card-text>
             </v-card>
@@ -178,8 +194,9 @@
 
           <div class="col-md-4" data-aos="fade-up">
             <v-card>
-              <v-card-text>
+              <v-card-text class="hobby-card">
                 <h2>Running</h2>
+                <p>Staying active and challenging myself</p>
                 <img src="assets/running.jpg" width="100%">
               </v-card-text>
             </v-card>
@@ -187,12 +204,19 @@
 
           <div class="col-md-4" data-aos="fade-up">
             <v-card>
-              <v-card-text>
+              <v-card-text class="hobby-card">
                 <h2>Bennie</h2>
+                <p>Adventures with my dog</p>
                 <img src="assets/bennie.jpeg" width="100%">
               </v-card-text>
             </v-card>
           </div>
+        </div>
+
+        <!-- TRAVEL -->
+        <div class="text-center" data-aos="fade-up">
+          <h1>Travel</h1>
+          <p>Exploring new places and cultures around the world</p>
         </div>
 
         <div class="travel-gallery" data-aos="fade-up">
