@@ -51,7 +51,7 @@ window.PorfolioConfig = {
     links: [
       { name: 'GitHub', link: 'https://github.com/sarahsiggins' },
       { name: 'LinkedIn', link: 'https://www.linkedin.com/in/sarahhsiggins/' },
-      { name: 'Resume', link: 'assets/SarahSiggins_Resume.pdf' }
+      { name: 'Resume', link: 'assets/Sarah_Siggins_Resume.pdf' }
     ]
   }
 };
