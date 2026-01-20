@@ -51,32 +51,18 @@
       object-fit: cover;
     }
 
-    /* ---------- HOBBY CARDS ---------- */
+    /* ---------- HOBBY CARD TEXT ---------- */
     .hobby-card {
       text-align: center;
     }
 
     .hobby-card h2 {
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .hobby-card p {
-      font-size: 14px;
       margin-bottom: 12px;
-      opacity: 0.85;
-    }
-
-    /* ---------- TRAVEL ---------- */
-    .travel-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 30px;
-    }
-
-    .travel-gallery img {
-      width: 100%;
-      border-radius: 8px;
+      font-weight: normal;
     }
 
     @media (max-width: 768px) {
@@ -92,6 +78,19 @@
         width: 80%;
       }
     }
+
+    /* ---------- TRAVEL GALLERY ---------- */
+    .travel-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .travel-gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -100,7 +99,7 @@
   <div class="v-application theme--light">
     <div class="v-application--wrap">
 
-      <!-- NAVBAR -->
+      <!-- NAVBAR (Plain Template Style) -->
       <v-app-bar app flat elevate-on-scroll color="white">
         <v-spacer></v-spacer>
 
@@ -213,17 +212,22 @@
           </div>
         </div>
 
-        <!-- TRAVEL -->
-        <div class="text-center" data-aos="fade-up">
-          <h1>Travel</h1>
-          <p>Exploring new places and cultures around the world</p>
-        </div>
-
-        <div class="travel-gallery" data-aos="fade-up">
-          <img src="assets/germany.jpg">
-          <img src="assets/iceland.jpeg">
-          <img src="assets/utah.jpg">
-          <img src="assets/hawaii.jpeg">
+        <!-- TRAVEL CARD -->
+        <div class="row justify-center">
+          <div class="col-md-12" data-aos="fade-up">
+            <v-card>
+              <v-card-text class="hobby-card">
+                <h2>Travel</h2>
+                <p>Exploring new places and cultures around the world</p>
+                <div class="travel-gallery">
+                  <img src="assets/germany.jpg">
+                  <img src="assets/iceland.jpeg">
+                  <img src="assets/utah.jpg">
+                  <img src="assets/hawaii.jpeg">
+                </div>
+              </v-card-text>
+            </v-card>
+          </div>
         </div>
       </section>
 
