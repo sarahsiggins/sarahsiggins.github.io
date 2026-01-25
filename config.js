@@ -17,7 +17,7 @@ window.PorfolioConfig = {
     {
        name: 'King County Housing Price Modeling',
       link: 'https://github.com/sarahsiggins/king-county-housing-price-modeling-r',
-      description: 'Analyzed King County housing data and built predictive models using R to estimate housing prices.',
+      // description: 'Analyzed King County housing data and built predictive models using R to estimate housing prices.',
       overview: `This project analyzes residential housing data from King County, Washington to understand the factors that drive home prices and to predict whether a home can be classified as good quality. Using real-world housing data, we apply statistical modeling techniques in R, with a focus on interpretability, diagnostics, and model evaluation.
 
 The project has two primary goals:
