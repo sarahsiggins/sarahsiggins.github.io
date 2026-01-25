@@ -35,7 +35,8 @@ The analysis emphasizes careful data cleaning, exploratory data analysis (EDA), 
     {
       name: 'Monte Carlo Dice Simulator',
       link: 'https://github.com/sarahsiggins/monte-carlo-dice-simulator',
-      description: 'A Python package for simulating dice games using Monte Carlo methods. Create custom dice, run multi-dice games, and analyze outcomes with jackpots, combinations, and permutations.'
+      description: `This project develops a Python package for simulating dice games using Monte Carlo methods. Users can create dice with custom faces and weights, run multi-dice games with hundreds or thousands of rolls, and analyze outcomes using jackpots, face counts, combinations, and permutations.
+        The project demonstrates object-oriented design, reproducible simulations, and data analysis in Python. Key learning objectives include building reusable classes (Die, Game, Analyzer), implementing weighted random sampling, and aggregating results with pandas for probability analysis and experimentation.'
     }
   ],
 
