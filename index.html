@@ -190,8 +190,10 @@
           <div v-for="work in works" class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
             <v-card hover class="project-card">
               <v-card-text>
-                <h2>{{ work.name }}</h2>
-                <p>{{ work.description }}</p>
+                <h2 class="highlight-title">{{ work.name }}</h2>
+                <!-- Only show description if it exists -->
+                <p v-if="work.description">{{ work.description }}</p>
+                <!-- Show overview -->
                 <p v-if="work.overview" class="overview">{{ work.overview }}</p>
               </v-card-text>
               <v-card-actions>
