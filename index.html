@@ -184,16 +184,18 @@
         <h1 class="text-center mb-6" data-aos="fade-up">Projects</h1>
         <div class="row justify-center">
           <div v-for="work in works" class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
-            <a :href="work.link" target="_blank">
-              <v-card hover class="project-card">
-                <v-card-text>
-                  <h2>{{ work.name }}</h2>
-                  <p>{{ work.description }}</p>
-                  <p v-if="work.overview" class="overview">{{ work.overview }}</p>
-                  <a :href="work.link" target="_blank" class="v-btn v-btn--outlined mt-3">View Project</a>
-                </v-card-text>
-              </v-card>
-            </a>
+            <v-card hover class="project-card">
+              <v-card-text>
+                <h2>{{ work.name }}</h2>
+                <p>{{ work.description }}</p>
+                <p v-if="work.overview" class="overview">{{ work.overview }}</p>
+              </v-card-text>
+              <v-card-actions>
+                <v-btn :href="work.link" target="_blank" outlined color="primary">
+                  View Project
+                </v-btn>
+              </v-card-actions>
+            </v-card>
           </div>
         </div>
       </section>
