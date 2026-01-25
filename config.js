@@ -15,9 +15,9 @@ window.PorfolioConfig = {
   // Projects / Work
   works: [
     {
-      name: 'Vue Stripe Checkout',
-      link: 'https://jofftiquez.github.io/vue-stripe-checkout',
-      description: 'Mollit dolor tempor adipisicing non pariatur in tempor cillum do.'
+       name: 'King County Housing Price Modeling',
+      link: 'https://github.com/sarahsiggins/king-county-housing-price-modeling-r',
+      description: 'Analyzed King County housing data and built predictive models using R to estimate housing prices.'
     },
     {
       name: 'ToDo App',
