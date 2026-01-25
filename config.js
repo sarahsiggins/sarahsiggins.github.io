@@ -1,4 +1,4 @@
-window.PorfolioConfig = {
+window.PortfolioConfig = {
   name: 'Sarah Siggins', 
   jobTitle: 'Portfolio Analyst and Data Science Student',
   jobDescription: 'Exploring the intersection of data science, finance, and engineering to solve real-world problems.',
