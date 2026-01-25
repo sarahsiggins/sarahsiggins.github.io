@@ -28,14 +28,14 @@ The project has two primary goals:
 The analysis emphasizes careful data cleaning, exploratory data analysis (EDA), model selection, and validation.`
     },
     {
-      name: 'ToDo App',
-      link: 'https://theuselessweb.com/',
-      description: 'Esse magna anim incididunt enim sint aute consectetur ipsum id nostrud eu do.'
-    },
-    {
       name: 'A Mobile Game',
       link: 'https://theuselessweb.com/',
       description: 'Incididunt non cupidatat deserunt ut commodo qui non do Lorem.'
+    },
+    {
+      name: 'Monte Carlo Dice Simulator',
+      link: 'https://github.com/sarahsiggins/monte-carlo-dice-simulator',
+      description: 'A Python package for simulating dice games using Monte Carlo methods. Create custom dice, run multi-dice games, and analyze outcomes with jackpots, combinations, and permutations.'
     }
   ],
 
