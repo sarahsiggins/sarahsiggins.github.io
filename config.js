@@ -28,9 +28,17 @@ The project has two primary goals:
 The analysis emphasizes careful data cleaning, exploratory data analysis (EDA), model selection, and validation.`
     },
     {
-      name: 'A Mobile Game',
-      link: 'https://theuselessweb.com/',
-      description: 'Incididunt non cupidatat deserunt ut commodo qui non do Lorem.'
+      name: 'Disaster Relief: Blue Tarp Detection',
+      link: 'https://github.com/sarahsiggins/disaster-relief-blue-tarps',
+      overview: `This project applies statistical learning and machine learning techniques to classify aerial image pixels as either Blue Tarp or Non-Tarp, supporting humanitarian disaster relief efforts in post-earthquake Haiti. Using RGB color values, the analysis identifies temporary shelters and helps prioritize aid distribution.
+
+The project has three main objectives:
+
+- Apply baseline models (Logistic Regression, LDA, QDA) and evaluate their performance
+- Tune advanced machine learning models (KNN, Random Forest, Gradient Boosting, SVMs) for improved detection
+- Optimize classification thresholds to maximize the F-measure and reduce false negatives
+
+The analysis emphasizes reproducible workflows in R, careful metric selection for imbalanced data, model evaluation on holdout regions, and practical considerations for real-world disaster response.`
     },
     {
       name: 'Monte Carlo Dice Simulator',
