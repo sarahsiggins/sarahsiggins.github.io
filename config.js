@@ -15,9 +15,18 @@ window.PortfolioConfig = {
   // Projects / Work
   works: [
     {
-       name: 'King County Housing Price Modeling',
+      name: 'AnimalCLEF Animal Photo Identification',
+      link: 'https://github.com/sarahsiggins/Animal_CLEF_Project',
+      description: 'Developed an open-set animal re-identification pipeline for the AnimalCLEF 2026 Kaggle competition. The project used computer vision and deep learning to identify known individual animals while detecting previously unseen individuals across multiple species. We evaluated MegaDescriptor and DINOv2 embeddings, DBSCAN clustering, and ArcFace fine-tuning, with model selection based on Adjusted Rand Index (ARI).'
+    },
+    {
+      name: 'Predicting FIFA World Cup Advancement with Apache Spark',
+      link: 'https://github.com/sarahsiggins/predicting-world-cup-advancement-apache-spark',
+      description: 'Built an end-to-end machine learning pipeline using Apache Spark MLlib to predict how far national teams advance in the FIFA World Cup. The project combined Elo ratings, FIFA rankings, team performance, squad market value, and historical tournament data to evaluate Logistic Regression, Random Forest, and Gradient Boosted Tree models and generate predictions for the 2026 World Cup.'
+    },
+    {
+      name: 'King County Housing Price Modeling',
       link: 'https://github.com/sarahsiggins/king-county-housing-price-modeling-r',
-      // description: 'Analyzed King County housing data and built predictive models using R to estimate housing prices.',
       overview: `This project analyzes residential housing data from King County, Washington to understand the factors that drive home prices and to predict whether a home can be classified as good quality. Using real-world housing data, we apply statistical modeling techniques in R, with a focus on interpretability, diagnostics, and model evaluation.
 
 The project has two primary goals:
@@ -43,7 +52,9 @@ The analysis emphasizes reproducible workflows in R, careful metric selection fo
     {
       name: 'Monte Carlo Dice Simulator',
       link: 'https://github.com/sarahsiggins/monte-carlo-dice-simulator',
-      overview: `This project develops a Python package for simulating dice games using Monte Carlo methods. Users can create dice with custom faces and weights, run multi-dice games with hundreds or thousands of rolls, and analyze outcomes using jackpots, face counts, combinations, and permutations.\n\nThe project demonstrates object-oriented design, reproducible simulations, and data analysis in Python. Key learning objectives include building reusable classes (Die, Game, Analyzer), implementing weighted random sampling, and aggregating results with pandas for probability analysis and experimentation.`
+      overview: `This project develops a Python package for simulating dice games using Monte Carlo methods. Users can create dice with custom faces and weights, run multi-dice games with hundreds or thousands of rolls, and analyze outcomes using jackpots, face counts, combinations, and permutations.
+
+The project demonstrates object-oriented design, reproducible simulations, and data analysis in Python. Key learning objectives include building reusable classes (Die, Game, Analyzer), implementing weighted random sampling, and aggregating results with pandas for probability analysis and experimentation.`
     }
   ],
 
