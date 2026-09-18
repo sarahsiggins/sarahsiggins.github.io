@@ -5,7 +5,7 @@ window.PortfolioConfig = {
   
   // About Me section
   education: 'M.S. Data Science from University of Virginia, B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
-  employer: 'Lead Portfolio Investment Analyst at T. Rowe Price',
+  employer: 'Senior Analyst at Capital One',
   aboutImages: [
     { file: 'solo.jpg', alt: 'Solo' },
     { file: 'vt1.jpg', alt: 'Virginia Tech 1' },
