@@ -23,7 +23,7 @@
 
     /* ---------- HERO ---------- */
     header.hero {
-      min-height: 100vh;
+      min-height: 55vh;
       display: flex;
       align-items: center;
     }
@@ -31,6 +31,10 @@
     header.hero img {
       max-width: 300px;
       border-radius: 10px;
+    }
+
+    header.hero h1 {
+      margin: 0;
     }
 
     /* ---------- ABOUT IMAGES ---------- */
@@ -68,6 +72,7 @@
     @media (max-width: 768px) {
       header.hero {
         text-align: center;
+        min-height: 50vh;
       }
 
       .about-images {
@@ -95,43 +100,39 @@
     /* ---------- PROJECT CARD ---------- */
     .project-card {
       height: 100%;
-      min-height: 450px; /* taller to fit overview */
+      min-height: 450px;
       display: flex;
       flex-direction: column;
     }
 
     .project-card h2 {
-      color: #1976D2; /* Vuetify primary blue, same as outlined button */
+      color: #1976D2;
+      text-align: center;
+      margin-bottom: 12px;
     }
-    
+
     .project-card .v-card-text {
       flex: 1;
-      overflow-y: auto; /* scroll if text is too long */
+      overflow-y: auto;
     }
-    
+
     .project-card .overview {
       margin-top: 12px;
       font-size: 0.9rem;
       color: #555;
-      white-space: pre-line; /* preserve line breaks from overview text */
-    }
-    .project-card h2 {
-      text-align: center;
-      margin-bottom: 12px;
+      white-space: pre-line;
     }
 
     /* ---------- MISC ---------- */
     h1.display-4 {
       white-space: normal;
     }
-    
+
     @media (min-width: 768px) {
       h1.display-4 {
         white-space: nowrap;
       }
     }
-
-    
   </style>
 </head>
 
@@ -140,7 +141,7 @@
   <div class="v-application theme--light">
     <div class="v-application--wrap">
 
-      <!-- NAVBAR (Plain Template Style) -->
+      <!-- NAVBAR -->
       <v-app-bar app flat elevate-on-scroll color="white">
         <v-spacer></v-spacer>
 
@@ -169,10 +170,9 @@
           <div class="col-md-4 text-center" data-aos="fade-up">
             <img src="assets/headshot.jpg" alt="Sarah Siggins">
           </div>
+
           <div class="col-md-6" data-aos="fade-up">
             <h1 class="display-4">{{ name }}</h1>
-            <h2 class="mt-4">{{ jobTitle }}</h2>
-            <p class="mt-4">{{ jobDescription }}</p>
           </div>
         </div>
       </header>
@@ -190,7 +190,7 @@
         <div class="text-center" data-aos="fade-up">
           <h3>Education</h3>
           <p>
-            M.S. in Data Science, University of Virginia (Expected Grad: August 2026)<br/>
+            M.S. in Data Science, University of Virginia<br/>
             B.S. Chemical Engineering, Virginia Tech<br/>
             B.S. Business (Finance), Virginia Tech
           </p>
@@ -203,18 +203,35 @@
       <!-- PROJECTS -->
       <section id="works" class="container my-16">
         <h1 class="text-center mb-6" data-aos="fade-up">Projects</h1>
+
         <div class="row justify-center">
-          <div v-for="work in works" class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+          <div
+            v-for="work in works"
+            class="col-md-4 col-sm-6 mb-4"
+            data-aos="fade-up"
+          >
             <v-card hover class="project-card">
               <v-card-text>
                 <h2 class="highlight-title">{{ work.name }}</h2>
-                <!-- Only show description if it exists -->
+
+                <!-- Show description if it exists -->
                 <p v-if="work.description">{{ work.description }}</p>
-                <!-- Show overview -->
-                <p v-if="work.overview" class="overview" v-html="work.overview.replace(/\n/g, '<br>')"></p>
+
+                <!-- Show overview if it exists -->
+                <p
+                  v-if="work.overview"
+                  class="overview"
+                  v-html="work.overview.replace(/\n/g, '<br>')"
+                ></p>
               </v-card-text>
+
               <v-card-actions class="justify-center">
-                <v-btn :href="work.link" target="_blank" outlined color="primary">
+                <v-btn
+                  :href="work.link"
+                  target="_blank"
+                  outlined
+                  color="primary"
+                >
                   View Project
                 </v-btn>
               </v-card-actions>
@@ -225,7 +242,9 @@
 
       <!-- HOBBIES & INTERESTS -->
       <section id="hobbies" class="container my-16">
-        <h1 class="text-center mb-6" data-aos="fade-up">Hobbies & Interests</h1>
+        <h1 class="text-center mb-6" data-aos="fade-up">
+          Hobbies & Interests
+        </h1>
 
         <div class="row justify-center mb-6">
           <div class="col-md-4" data-aos="fade-up">
@@ -266,11 +285,12 @@
               <v-card-text class="hobby-card">
                 <h2>Travel</h2>
                 <p>Exploring new places and cultures around the world</p>
+
                 <div class="travel-gallery">
-                  <img src="assets/germany.jpg">
-                  <img src="assets/iceland.jpeg">
-                  <img src="assets/utah.jpg">
-                  <img src="assets/hawaii.jpeg">
+                  <img src="assets/germany.jpg" alt="Germany">
+                  <img src="assets/iceland.jpeg" alt="Iceland">
+                  <img src="assets/utah.jpg" alt="Utah">
+                  <img src="assets/hawaii.jpeg" alt="Hawaii">
                 </div>
               </v-card-text>
             </v-card>
@@ -284,15 +304,18 @@
         <p>{{ contacts.email }}</p>
 
         <div>
-          <a v-for="link in contacts.links"
-             :href="link.link"
-             target="_blank"
-             class="ma-1 v-btn v-btn--outlined theme--light">
+          <a
+            v-for="link in contacts.links"
+            :href="link.link"
+            target="_blank"
+            class="ma-1 v-btn v-btn--outlined theme--light"
+          >
             <span class="v-btn__content">{{ link.name }}</span>
           </a>
         </div>
       </section>
 
+      <!-- FOOTER -->
       <footer class="text-center my-6">
         <small>Template by Jofferson R. Tiquez</small>
       </footer>
@@ -319,5 +342,6 @@ new Vue({
 
 AOS.init({ once: true })
 </script>
+
 </body>
 </html>
