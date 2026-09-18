@@ -1,11 +1,11 @@
 window.PortfolioConfig = {
   name: 'Sarah Siggins', 
-  jobTitle: 'Portfolio Analyst and Data Science Student',
-  jobDescription: 'Exploring the intersection of data science, finance, and engineering to solve real-world problems.',
+  //jobTitle: 'Portfolio Analyst and Data Science Student',
+  //jobDescription: 'Exploring the intersection of data science, finance, and engineering to solve real-world problems.',
   
   // About Me section
-  education: 'Masters in Data Science from University of Virginia (Expected Graduation: August 2026), B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
-  employer: 'Lead Portfolio Investment Analyst at T. Rowe Price',
+  education: 'Masters in Data Science from University of Virginia, B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
+  employer: 'Senior Analyst at Capital One',
   aboutImages: [
     { file: 'solo.jpg', alt: 'Solo' },
     { file: 'vt1.jpg', alt: 'Virginia Tech 1' },
@@ -17,24 +17,12 @@ window.PortfolioConfig = {
     {
       name: 'AnimalCLEF Animal Photo Identification',
       link: 'https://github.com/sarahsiggins/Animal_CLEF_Project',
-      overview: `This project develops an open-set animal re-identification pipeline for the AnimalCLEF 2026 Kaggle competition. The goal is to identify individual animals that have been observed previously while also detecting individuals that were not present in the training data.
-
-The project focuses on wildlife computer vision across multiple species, using animal photographs to learn meaningful visual representations for individual identification. The pipeline includes data loading and preprocessing, encounter-aware train/validation splitting, frozen embedding extraction, similarity-based open-set inference, clustering, and model fine-tuning.
-
-We compared MegaDescriptor and DINOv2 foundation model embeddings and established a DBSCAN clustering baseline. We then fine-tuned MegaDescriptor using ArcFace to improve individual-level representations. Model performance was evaluated primarily using Adjusted Rand Index (ARI), with the final fine-tuned MegaDescriptor model achieving an ARI of 0.09148.
-
-The project demonstrates applications of deep learning, computer vision, open-set recognition, metric learning, and wildlife re-identification.`
+      description: 'Developed an open-set animal re-identification pipeline for the AnimalCLEF 2026 Kaggle competition. The project used computer vision and deep learning to identify known individual animals while detecting previously unseen individuals across multiple species. We compared MegaDescriptor and DINOv2 embeddings, DBSCAN clustering, and ArcFace fine-tuning, evaluating performance using Adjusted Rand Index (ARI).'
     },
     {
       name: 'Predicting FIFA World Cup Advancement with Apache Spark',
       link: 'https://github.com/sarahsiggins/predicting-world-cup-advancement-apache-spark',
-      overview: `This project develops an end-to-end machine learning workflow using Apache Spark and Spark MLlib to predict how far national teams advance in the FIFA World Cup. Rather than predicting only tournament winners, the project treats advancement as four separate binary classification tasks: reaching the quarter-finals, semi-finals, final, and winning the championship.
-
-The models use pre-tournament information including Elo ratings, FIFA rankings, team performance, squad market values, and previous World Cup experience. We evaluated Logistic Regression, Random Forest, and Gradient Boosted Tree models to compare predictive performance across the different advancement stages.
-
-To avoid information leakage, the project uses a chronological train/test design, training on World Cups from 2002 through 2018 and testing on the 2022 World Cup. The resulting workflow is then used to generate predictions for the 2026 World Cup.
-
-The project demonstrates large-scale machine learning with Apache Spark, feature engineering, model comparison, evaluation using F1 and AUROC, and reproducible data engineering workflows using Python and Spark MLlib.`
+      description: 'Built an end-to-end machine learning pipeline using Apache Spark MLlib to predict how far national teams advance in the FIFA World Cup. The project used Elo ratings, FIFA rankings, team performance, squad market value, and historical tournament data as predictive features. Logistic Regression, Random Forest, and Gradient Boosted Tree models were evaluated to generate predictions for the 2026 World Cup.'
     },
     {
       name: 'King County Housing Price Modeling',
