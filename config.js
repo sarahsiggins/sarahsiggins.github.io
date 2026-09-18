@@ -1,11 +1,11 @@
 window.PortfolioConfig = {
   name: 'Sarah Siggins', 
-  //jobTitle: 'Portfolio Analyst and Data Science Student',
-  //jobDescription: 'Exploring the intersection of data science, finance, and engineering to solve real-world problems.',
+  // jobTitle: 'Portfolio Analyst and Data Science Student',
+  // jobDescription: 'Exploring the intersection of data science, finance, and engineering to solve real-world problems.',
   
   // About Me section
-  education: 'Masters in Data Science from University of Virginia, B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
-  employer: 'Senior Analyst at Capital One',
+  education: 'M.S. in Data Science from University of Virginia, B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
+  employer: 'Lead Portfolio Investment Analyst at T. Rowe Price',
   aboutImages: [
     { file: 'solo.jpg', alt: 'Solo' },
     { file: 'vt1.jpg', alt: 'Virginia Tech 1' },
@@ -17,12 +17,12 @@ window.PortfolioConfig = {
     {
       name: 'AnimalCLEF Animal Photo Identification',
       link: 'https://github.com/sarahsiggins/Animal_CLEF_Project',
-      description: 'Developed an open-set animal re-identification pipeline for the AnimalCLEF 2026 Kaggle competition. The project used computer vision and deep learning to identify known individual animals while detecting previously unseen individuals across multiple species. We compared MegaDescriptor and DINOv2 embeddings, DBSCAN clustering, and ArcFace fine-tuning, evaluating performance using Adjusted Rand Index (ARI).'
+      description: 'Developed an open-set animal re-identification pipeline for the AnimalCLEF 2026 Kaggle competition, focused on identifying known individual animals while detecting previously unseen individuals across multiple species. The project applied computer vision and deep learning techniques to animal photographs, including frozen embedding extraction, similarity-based inference, and clustering. We compared MegaDescriptor and DINOv2 embeddings, established a DBSCAN baseline, and fine-tuned MegaDescriptor using ArcFace. Model performance was evaluated using Adjusted Rand Index (ARI), with the project demonstrating applications of deep learning, metric learning, and wildlife re-identification.'
     },
     {
       name: 'Predicting FIFA World Cup Advancement with Apache Spark',
       link: 'https://github.com/sarahsiggins/predicting-world-cup-advancement-apache-spark',
-      description: 'Built an end-to-end machine learning pipeline using Apache Spark MLlib to predict how far national teams advance in the FIFA World Cup. The project used Elo ratings, FIFA rankings, team performance, squad market value, and historical tournament data as predictive features. Logistic Regression, Random Forest, and Gradient Boosted Tree models were evaluated to generate predictions for the 2026 World Cup.'
+      description: 'Built an end-to-end machine learning pipeline using Apache Spark and Spark MLlib to predict how far national teams advance in the FIFA World Cup. The project modeled four advancement stages using pre-tournament features including Elo ratings, FIFA rankings, team performance, squad market values, and previous World Cup experience. Logistic Regression, Random Forest, and Gradient Boosted Tree models were evaluated using F1 and AUROC metrics. A chronological train/test approach was used to train on tournaments from 2002–2018, evaluate on 2022, and generate predictions for the 2026 World Cup.'
     },
     {
       name: 'King County Housing Price Modeling',
