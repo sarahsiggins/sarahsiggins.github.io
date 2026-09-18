@@ -29,11 +29,17 @@
     }
 
     header.hero img {
-      max-width: 300px;
+      display: block;
+      width: auto;
+      max-width: 100%;
+      max-height: 350px;
+      height: auto;
       border-radius: 10px;
+      margin: 0 auto;
     }
 
     header.hero h1 {
+      font-size: 3.5rem !important;
       margin: 0;
     }
 
@@ -67,21 +73,6 @@
     .hobby-card p {
       margin-bottom: 12px;
       font-weight: normal;
-    }
-
-    @media (max-width: 768px) {
-      header.hero {
-        text-align: center;
-        min-height: 50vh;
-      }
-
-      .about-images {
-        flex-direction: column;
-      }
-
-      .about-images img {
-        width: 80%;
-      }
     }
 
     /* ---------- TRAVEL GALLERY ---------- */
@@ -133,6 +124,27 @@
         white-space: nowrap;
       }
     }
+
+    /* ---------- MOBILE ---------- */
+    @media (max-width: 768px) {
+      header.hero {
+        text-align: center;
+        min-height: 50vh;
+      }
+
+      header.hero h1 {
+        font-size: 2.75rem !important;
+        margin-top: 20px;
+      }
+
+      .about-images {
+        flex-direction: column;
+      }
+
+      .about-images img {
+        width: 80%;
+      }
+    }
   </style>
 </head>
 
@@ -167,6 +179,7 @@
       <!-- HERO -->
       <header class="hero container">
         <div class="row align-center justify-center">
+          
           <div class="col-md-4 text-center" data-aos="fade-up">
             <img src="assets/headshot.jpg" alt="Sarah Siggins">
           </div>
@@ -174,12 +187,15 @@
           <div class="col-md-6" data-aos="fade-up">
             <h1 class="display-4">{{ name }}</h1>
           </div>
+
         </div>
       </header>
 
       <!-- ABOUT -->
       <section id="about" class="container my-16">
-        <h1 class="text-center mb-6" data-aos="fade-up">About Me</h1>
+        <h1 class="text-center mb-6" data-aos="fade-up">
+          About Me
+        </h1>
 
         <div class="about-images" data-aos="fade-up">
           <img src="assets/vt1.jpg" alt="Virginia Tech">
@@ -189,6 +205,7 @@
 
         <div class="text-center" data-aos="fade-up">
           <h3>Education</h3>
+
           <p>
             M.S. in Data Science, University of Virginia<br/>
             B.S. Chemical Engineering, Virginia Tech<br/>
@@ -196,26 +213,38 @@
           </p>
 
           <h3 class="mt-6">Current Role</h3>
-          <p>Lead Portfolio Investment Analyst at T. Rowe Price</p>
+
+          <p>
+            Lead Portfolio Investment Analyst at T. Rowe Price
+          </p>
         </div>
       </section>
 
       <!-- PROJECTS -->
       <section id="works" class="container my-16">
-        <h1 class="text-center mb-6" data-aos="fade-up">Projects</h1>
+        <h1 class="text-center mb-6" data-aos="fade-up">
+          Projects
+        </h1>
 
         <div class="row justify-center">
+
           <div
             v-for="work in works"
             class="col-md-4 col-sm-6 mb-4"
             data-aos="fade-up"
           >
             <v-card hover class="project-card">
+
               <v-card-text>
-                <h2 class="highlight-title">{{ work.name }}</h2>
+
+                <h2 class="highlight-title">
+                  {{ work.name }}
+                </h2>
 
                 <!-- Show description if it exists -->
-                <p v-if="work.description">{{ work.description }}</p>
+                <p v-if="work.description">
+                  {{ work.description }}
+                </p>
 
                 <!-- Show overview if it exists -->
                 <p
@@ -223,6 +252,7 @@
                   class="overview"
                   v-html="work.overview.replace(/\n/g, '<br>')"
                 ></p>
+
               </v-card-text>
 
               <v-card-actions class="justify-center">
@@ -235,104 +265,193 @@
                   View Project
                 </v-btn>
               </v-card-actions>
+
             </v-card>
           </div>
+
         </div>
       </section>
 
       <!-- HOBBIES & INTERESTS -->
       <section id="hobbies" class="container my-16">
+
         <h1 class="text-center mb-6" data-aos="fade-up">
           Hobbies & Interests
         </h1>
 
+        <!-- HOBBY CARDS -->
         <div class="row justify-center mb-6">
+
+          <!-- HIKING -->
           <div class="col-md-4" data-aos="fade-up">
             <v-card>
               <v-card-text class="hobby-card">
+
                 <h2>Hiking</h2>
-                <p>Exploring new trails</p>
-                <img src="assets/hiking.jpg" width="100%">
+
+                <p>
+                  Exploring new trails
+                </p>
+
+                <img
+                  src="assets/hiking.jpg"
+                  width="100%"
+                  alt="Hiking"
+                >
+
               </v-card-text>
             </v-card>
           </div>
 
+          <!-- RUNNING -->
           <div class="col-md-4" data-aos="fade-up">
             <v-card>
               <v-card-text class="hobby-card">
+
                 <h2>Running</h2>
-                <p>Staying active and challenging myself</p>
-                <img src="assets/running.jpg" width="100%">
+
+                <p>
+                  Staying active and challenging myself
+                </p>
+
+                <img
+                  src="assets/running.jpg"
+                  width="100%"
+                  alt="Running"
+                >
+
               </v-card-text>
             </v-card>
           </div>
 
+          <!-- BENNIE -->
           <div class="col-md-4" data-aos="fade-up">
             <v-card>
               <v-card-text class="hobby-card">
+
                 <h2>Bennie</h2>
-                <p>Adventures with my dog</p>
-                <img src="assets/bennie.jpeg" width="100%">
+
+                <p>
+                  Adventures with my dog
+                </p>
+
+                <img
+                  src="assets/bennie.jpeg"
+                  width="100%"
+                  alt="Bennie"
+                >
+
               </v-card-text>
             </v-card>
           </div>
+
         </div>
 
         <!-- TRAVEL CARD -->
         <div class="row justify-center">
+
           <div class="col-md-12" data-aos="fade-up">
+
             <v-card style="margin-top: 12px;">
+
               <v-card-text class="hobby-card">
+
                 <h2>Travel</h2>
-                <p>Exploring new places and cultures around the world</p>
+
+                <p>
+                  Exploring new places and cultures around the world
+                </p>
 
                 <div class="travel-gallery">
-                  <img src="assets/germany.jpg" alt="Germany">
-                  <img src="assets/iceland.jpeg" alt="Iceland">
-                  <img src="assets/utah.jpg" alt="Utah">
-                  <img src="assets/hawaii.jpeg" alt="Hawaii">
+
+                  <img
+                    src="assets/germany.jpg"
+                    alt="Germany"
+                  >
+
+                  <img
+                    src="assets/iceland.jpeg"
+                    alt="Iceland"
+                  >
+
+                  <img
+                    src="assets/utah.jpg"
+                    alt="Utah"
+                  >
+
+                  <img
+                    src="assets/hawaii.jpeg"
+                    alt="Hawaii"
+                  >
+
                 </div>
+
               </v-card-text>
+
             </v-card>
+
           </div>
+
         </div>
+
       </section>
 
       <!-- CONTACT -->
       <section id="contact" class="container my-16 text-center">
-        <h1 data-aos="fade-up">Let's Connect</h1>
-        <p>{{ contacts.email }}</p>
+
+        <h1 data-aos="fade-up">
+          Let's Connect
+        </h1>
+
+        <p>
+          {{ contacts.email }}
+        </p>
 
         <div>
+
           <a
             v-for="link in contacts.links"
             :href="link.link"
             target="_blank"
             class="ma-1 v-btn v-btn--outlined theme--light"
           >
-            <span class="v-btn__content">{{ link.name }}</span>
+            <span class="v-btn__content">
+              {{ link.name }}
+            </span>
           </a>
+
         </div>
+
       </section>
 
       <!-- FOOTER -->
       <footer class="text-center my-6">
-        <small>Template by Jofferson R. Tiquez</small>
+        <small>
+          Template by Jofferson R. Tiquez
+        </small>
       </footer>
 
     </div>
   </div>
 </div>
 
+<!-- VUE -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+
+<!-- VUETIFY -->
 <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+<!-- PORTFOLIO CONFIG -->
 <script src="config.js"></script>
+
+<!-- AOS -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 <script>
 new Vue({
   el: '#app',
   vuetify: new Vuetify(),
+
   data() {
     return {
       ...window.PortfolioConfig
@@ -340,7 +459,9 @@ new Vue({
   }
 })
 
-AOS.init({ once: true })
+AOS.init({
+  once: true
+})
 </script>
 
 </body>
