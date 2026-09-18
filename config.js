@@ -4,7 +4,7 @@ window.PortfolioConfig = {
   // jobDescription: 'Exploring the intersection of data science, finance, and engineering to solve real-world problems.',
   
   // About Me section
-  education: 'M.S. in Data Science from University of Virginia, B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
+  education: 'M.S. Data Science from University of Virginia, B.S. Chemical Engineering from Virginia Tech, B.S. Business (Finance Major) from Virginia Tech',
   employer: 'Lead Portfolio Investment Analyst at T. Rowe Price',
   aboutImages: [
     { file: 'solo.jpg', alt: 'Solo' },
